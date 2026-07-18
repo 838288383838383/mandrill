@@ -5,6 +5,7 @@ Cargo.lock
 # Go
 mandrill
 *.exe
+dist/
 
 # OS
 .DS_Store
