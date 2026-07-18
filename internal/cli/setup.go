@@ -7,8 +7,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/oddman/mandrill/internal/config"
-	"github.com/oddman/mandrill/internal/github"
+	"github.com/838288383838383/mandrill/internal/config"
+	"github.com/838288383838383/mandrill/internal/github"
 )
 
 var setupBanner = `

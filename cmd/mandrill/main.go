@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/oddman/mandrill/internal/cli"
-	"github.com/oddman/mandrill/internal/config"
+	"github.com/838288383838383/mandrill/internal/cli"
+	"github.com/838288383838383/mandrill/internal/config"
 )
 
 var banner = `

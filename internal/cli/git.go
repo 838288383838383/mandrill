@@ -1,7 +1,7 @@
 package cli
 
 import (
-	"github.com/oddman/mandrill/internal/tui"
+	"github.com/838288383838383/mandrill/internal/tui"
 	"github.com/spf13/cobra"
 )
 

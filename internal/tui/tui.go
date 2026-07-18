@@ -5,7 +5,7 @@ import (
 	"time"
 
 	tea "github.com/charmbracelet/bubbletea"
-	"github.com/oddman/mandrill/internal/tui/styles"
+	"github.com/838288383838383/mandrill/internal/tui/styles"
 )
 
 var mandrillASCII = `

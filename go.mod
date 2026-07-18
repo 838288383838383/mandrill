@@ -1,4 +1,4 @@
-module github.com/oddman/mandrill
+module github.com/838288383838383/mandrill
 
 go 1.24.0
 
