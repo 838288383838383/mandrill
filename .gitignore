@@ -1,0 +1,18 @@
+# Rust
+target/
+Cargo.lock
+
+# Go
+mandrill
+*.exe
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
