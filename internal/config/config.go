@@ -54,11 +54,18 @@ type TUIConfig struct {
 func MandrillDir() string {
 	home, _ := os.UserHomeDir()
 
-	if runtime.GOOS == "darwin" {
+	switch runtime.GOOS {
+	case "darwin":
 		appSupport := filepath.Join(home, "Library", "Application Support", "mandrill")
 		if _, err := os.Stat(appSupport); err == nil {
 			return appSupport
 		}
+	case "windows":
+		appData := os.Getenv("LOCALAPPDATA")
+		if appData != "" {
+			return filepath.Join(appData, "mandrill")
+		}
+		return filepath.Join(home, "AppData", "Local", "mandrill")
 	}
 
 	return filepath.Join(home, ".mandrill")
@@ -80,7 +87,7 @@ func EnsureMandrillDir() error {
 		}
 	}
 
-	if runtime.GOOS == "darwin" {
+	if runtime.GOOS == "windows" {
 		binDir := filepath.Join(dir, "bin")
 		_ = os.MkdirAll(binDir, 0755)
 	}
@@ -89,10 +96,18 @@ func EnsureMandrillDir() error {
 }
 
 func DefaultConfig() *Config {
-	prefix := "~/.mandrill/bin"
-	if runtime.GOOS == "darwin" {
-		home, _ := os.UserHomeDir()
+	home, _ := os.UserHomeDir()
+	prefix := filepath.Join(home, ".mandrill", "bin")
+
+	switch runtime.GOOS {
+	case "darwin":
 		prefix = filepath.Join(home, ".mandrill", "bin")
+	case "windows":
+		appData := os.Getenv("LOCALAPPDATA")
+		if appData == "" {
+			appData = filepath.Join(home, "AppData", "Local")
+		}
+		prefix = filepath.Join(appData, "mandrill", "bin")
 	}
 
 	return &Config{

@@ -1,7 +1,7 @@
 # mandrill
 
 > **Disclaimer:** This project is named "mandrill" and is a package manager / git TUI tool.
-> It is **NOT** affiliated with, endorsed by, or related to [Mailchimp's Mandrill](https://mandrillapp.com/)
+> It is **NOT** affiliated with endorsed by, or related to [Mailchimp's Mandrill](https://mandrillapp.com/)
 > transactional email service or any of its associated libraries, wrappers, or API clients.
 
 A package manager and git TUI on steroids, built with Go and Rust.
@@ -13,11 +13,11 @@ A package manager and git TUI on steroids, built with Go and Rust.
 - GitHub CLI (`gh`) integration
 - 13 built-in color themes (catppuccin, dracula, tokyo-night, etc.)
 - Idle screensaver with animated ASCII art
-- macOS native paths (`~/Library/Application Support/mandrill`)
+- Cross-platform: macOS, Linux, Windows
 
 ## Installation
 
-### macOS (Recommended)
+### macOS
 
 **Quick install:**
 ```bash
@@ -50,7 +50,26 @@ GOPROXY=direct go install github.com/838288383838383/mandrill/cmd/mandrill@lates
 
 ### Windows
 
-Download `mandrill-windows-amd64.exe` from [releases](https://github.com/838288383838383/mandrill/releases).
+**Quick install (PowerShell):**
+```powershell
+Invoke-WebRequest -Uri "https://github.com/838288383838383/mandrill/releases/latest/download/mandrill-windows-amd64.exe" -OutFile "$env:LOCALAPPDATA\mandrill\bin\mandrill.exe"
+$env:PATH += ";$env:LOCALAPPDATA\mandrill\bin"
+```
+
+**Batch install:**
+```
+install.bat
+```
+
+**Go:**
+```
+GOPROXY=direct go install github.com/838288383838383/mandrill/cmd/mandrill@latest
+```
+
+**Scoop:**
+```
+scoop install mandrill
+```
 
 ## Usage
 
@@ -72,6 +91,14 @@ On first launch, mandrill will prompt you to set up GitHub CLI integration:
 ? Pair with GitHub CLI (gh)? [y/n/fuckoff]
 ```
 
+## Platform Paths
+
+| OS | Config Location |
+|----|-----------------|
+| macOS | `~/Library/Application Support/mandrill/` |
+| Linux | `~/.mandrill/` |
+| Windows | `%LOCALAPPDATA%\mandrill\` |
+
 ## Build from Source
 
 ```bash
@@ -79,7 +106,8 @@ git clone https://github.com/838288383838383/mandrill.git
 cd mandrill
 make build          # Build for current platform
 make build-all      # Build for all platforms
-make mac-sign       # Sign macOS binaries (requires codesign)
+make mac-sign       # Sign macOS binaries
+make release        # Build + GitHub release
 ```
 
 ## License
