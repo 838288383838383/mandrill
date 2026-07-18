@@ -3,6 +3,7 @@ package config
 import (
 	"os"
 	"path/filepath"
+	"runtime"
 
 	"github.com/BurntSushi/toml"
 )
@@ -52,6 +53,14 @@ type TUIConfig struct {
 
 func MandrillDir() string {
 	home, _ := os.UserHomeDir()
+
+	if runtime.GOOS == "darwin" {
+		appSupport := filepath.Join(home, "Library", "Application Support", "mandrill")
+		if _, err := os.Stat(appSupport); err == nil {
+			return appSupport
+		}
+	}
+
 	return filepath.Join(home, ".mandrill")
 }
 
@@ -70,10 +79,22 @@ func EnsureMandrillDir() error {
 			return err
 		}
 	}
+
+	if runtime.GOOS == "darwin" {
+		binDir := filepath.Join(dir, "bin")
+		_ = os.MkdirAll(binDir, 0755)
+	}
+
 	return nil
 }
 
 func DefaultConfig() *Config {
+	prefix := "~/.mandrill/bin"
+	if runtime.GOOS == "darwin" {
+		home, _ := os.UserHomeDir()
+		prefix = filepath.Join(home, ".mandrill", "bin")
+	}
+
 	return &Config{
 		Setup: SetupConfig{
 			SetupComplete: false,
@@ -88,7 +109,7 @@ func DefaultConfig() *Config {
 			Default: "mandrill/mandrill-registry",
 		},
 		Install: InstallConfig{
-			Prefix:      "~/.mandrill/bin",
+			Prefix:      prefix,
 			AutoAddPath: true,
 		},
 		Theme: ThemeConfig{
