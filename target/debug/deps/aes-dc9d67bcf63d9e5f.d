@@ -1,0 +1,13 @@
+/home/oddman/Documents/projectsodd/mandrill/target/debug/deps/aes-dc9d67bcf63d9e5f.d: /home/oddman/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aes-0.8.4/src/lib.rs /home/oddman/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aes-0.8.4/src/soft.rs /home/oddman/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aes-0.8.4/src/soft/fixslice64.rs /home/oddman/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aes-0.8.4/src/autodetect.rs /home/oddman/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aes-0.8.4/src/ni.rs /home/oddman/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aes-0.8.4/src/ni/utils.rs /home/oddman/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aes-0.8.4/src/ni/aes128.rs /home/oddman/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aes-0.8.4/src/ni/aes192.rs /home/oddman/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aes-0.8.4/src/ni/aes256.rs
+
+/home/oddman/Documents/projectsodd/mandrill/target/debug/deps/libaes-dc9d67bcf63d9e5f.rmeta: /home/oddman/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aes-0.8.4/src/lib.rs /home/oddman/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aes-0.8.4/src/soft.rs /home/oddman/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aes-0.8.4/src/soft/fixslice64.rs /home/oddman/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aes-0.8.4/src/autodetect.rs /home/oddman/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aes-0.8.4/src/ni.rs /home/oddman/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aes-0.8.4/src/ni/utils.rs /home/oddman/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aes-0.8.4/src/ni/aes128.rs /home/oddman/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aes-0.8.4/src/ni/aes192.rs /home/oddman/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aes-0.8.4/src/ni/aes256.rs
+
+/home/oddman/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aes-0.8.4/src/lib.rs:
+/home/oddman/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aes-0.8.4/src/soft.rs:
+/home/oddman/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aes-0.8.4/src/soft/fixslice64.rs:
+/home/oddman/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aes-0.8.4/src/autodetect.rs:
+/home/oddman/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aes-0.8.4/src/ni.rs:
+/home/oddman/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aes-0.8.4/src/ni/utils.rs:
+/home/oddman/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aes-0.8.4/src/ni/aes128.rs:
+/home/oddman/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aes-0.8.4/src/ni/aes192.rs:
+/home/oddman/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aes-0.8.4/src/ni/aes256.rs:

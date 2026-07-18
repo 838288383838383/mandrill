@@ -1,0 +1,23 @@
+[packages.rg]
+version = "14.1.1"
+manifest = "packages/rg/manifest.toml"
+
+[packages.bat]
+version = "0.24.0"
+manifest = "packages/bat/manifest.toml"
+
+[packages.fd]
+version = "10.2.0"
+manifest = "packages/fd/manifest.toml"
+
+[packages.fzf]
+version = "0.54.0"
+manifest = "packages/fzf/manifest.toml"
+
+[packages.jq]
+version = "1.7.1"
+manifest = "packages/jq/manifest.toml"
+
+[packages.delta]
+version = "0.18.2"
+manifest = "packages/delta/manifest.toml"

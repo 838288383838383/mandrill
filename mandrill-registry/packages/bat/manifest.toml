@@ -1,0 +1,14 @@
+[package]
+name = "bat"
+version = "0.24.0"
+description = "A cat(1) clone with wings"
+homepage = "https://github.com/sharkdp/bat"
+repository = "https://github.com/sharkdp/bat"
+
+[dependencies]
+
+[install]
+type = "binary"
+url = "https://github.com/sharkdp/bat/releases/download/{{version}}/bat-{{version}}-x86_64-unknown-linux-musl.tar.gz"
+strip_prefix = "bat-{{version}}-x86_64-unknown-linux-musl"
+bin = ["bat"]

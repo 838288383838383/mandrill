@@ -1,0 +1,14 @@
+[package]
+name = "rg"
+version = "14.1.1"
+description = "ripgrep - a line-oriented search tool"
+homepage = "https://github.com/BurntSushi/ripgrep"
+repository = "https://github.com/BurntSushi/ripgrep"
+
+[dependencies]
+
+[install]
+type = "binary"
+url = "https://github.com/BurntSushi/ripgrep/releases/download/{{version}}/ripgrep-{{version}}-x86_64-unknown-linux-musl.tar.gz"
+strip_prefix = "ripgrep-{{version}}-x86_64-unknown-linux-musl"
+bin = ["rg"]
